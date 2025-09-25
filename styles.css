@@ -14,7 +14,7 @@ body {
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
-    background: #E8E0F0; /* Fundo claro lilás */
+    background: #F0E7F5; /* Cor de fundo do Figma */
 }
 
 .container {
@@ -23,14 +23,16 @@ body {
     padding: 0 20px;
 }
 
-/* Header e Navegação em Abas - Estilo da Imagem */
+/* Header e Navegação - Estilo Figma */
 .header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: transparent;
+    background: rgba(240, 231, 245, 0.95); /* Cor do Figma com transparência */
+    backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 20px 0 0 0;
+    transition: all 0.3s ease;
+    box-shadow: inset -3px 3px 10px rgba(180, 165, 203, 0.6);
 }
 
 .nav-container {
@@ -38,74 +40,65 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
 }
 
-.nav-logo {
-    display: none; /* Ocultar logo para focar nas abas */
+.nav-logo h2 {
+    background: linear-gradient(135deg, #7B40C9 0%, #4D2681 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 0;
-    background: transparent;
-    border-radius: 0;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-item {
-    position: relative;
+    gap: 4rem;
 }
 
 .nav-link {
     text-decoration: none;
-    color: #4A4A4A;
+    color: #000000;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
     display: flex;
     align-items: center;
-    justify-content: center;
     text-align: center;
-    padding: 15px 30px;
-    background: #C8B8D8; /* Cor das abas inativas */
-    border-radius: 25px 25px 0 0;
-    margin-right: 0%;
     transition: all 0.3s ease;
     position: relative;
-    min-width: 376px;
-    border: 2px solid #B8A8C8;
-    border-bottom: none;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
 }
 
 .nav-link:hover {
-    background: #D8C8E8;
-    color: #333;
+    color: #7B40C9;
+    font-weight: 600;
 }
 
 .nav-link.active {
-    background: #F0E8F8; /* Cor da aba ativa - mais clara */
-    color: #333;
-    border-color: #D0C0D8;
-    z-index: 2;
-    position: relative;
+    color: #4D2681;
+    font-weight: 600;
 }
 
-/* Conectar a aba ativa com o conteúdo */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 0;
+    background: linear-gradient(135deg, #7B40C9 0%, #4D2681 100%);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
 .nav-link.active::after {
-    /* ... outras propriedades ... */
-    bottom: -2px;
-    left: -2px;
-    right: -2px;
-    height: 4px;
-    border-bottom-left-radius: 0;  /* <-- Remove o arredondamento inferior esquerdo */
-    border-bottom-right-radius: 0; /* <-- Remove o arredondamento inferior direito */
-    background: #F0E8F8;
-    z-index: 3;
+    width: 100%;
 }
 
 .nav-toggle {
@@ -122,27 +115,27 @@ body {
     transition: 0.3s;
 }
 
-/* Área de conteúdo principal */
-.main-content {
-    background: #F0E8F8; /* Fundo claro que conecta com as abas */
-    min-height: 100vh;
-    margin-top: 80px; /* Espaço para as abas */
-    border-radius: 0;
-    position: relative;
-    border: 2px solid #D0C0D8;
-    border-top: none;
-}
-
-/* Seção Hero */
+/* Seção Hero - Adaptada com cores do Figma */
 .hero {
-    min-height: calc(100vh - 80px);
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    background: #F0E8F8;
-    color: #333;
+    background: linear-gradient(135deg, #B4A5CB 0%, #7B40C9 50%, #4D2681 100%);
+    color: white;
     position: relative;
     overflow: hidden;
-    padding: 60px 0;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(180, 165, 203, 0.1);
+    border-radius: 45px;
+    margin: 20px;
 }
 
 .hero-container {
@@ -163,11 +156,10 @@ body {
     margin-bottom: 1rem;
     line-height: 1.2;
     font-family: 'Open Sans', sans-serif;
-    color: #4D2681;
 }
 
 .highlight {
-    background: linear-gradient(135deg, #7B40C9 0%, #4D2681 100%);
+    background: linear-gradient(135deg, #F0E7F5 0%, #B4A5CB 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -177,13 +169,14 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #7B40C9;
+    opacity: 0.9;
+    color: #F0E7F5;
 }
 
 .hero-description {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    color: #666;
+    opacity: 0.8;
     line-height: 1.6;
 }
 
@@ -205,27 +198,27 @@ body {
 }
 
 .btn-primary {
-    background: #7B40C9;
-    color: white;
-    border: 2px solid #7B40C9;
+    background: #F0E7F5;
+    color: #4D2681;
+    box-shadow: inset -3px 3px 10px rgba(180, 165, 203, 0.6);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(123, 64, 201, 0.3);
-    background: #4D2681;
-    border-color: #4D2681;
+    box-shadow: 0 10px 25px rgba(77, 38, 129, 0.3);
+    background: #B4A5CB;
+    color: white;
 }
 
 .btn-secondary {
     background: transparent;
-    color: #7B40C9;
-    border: 2px solid #7B40C9;
+    color: #F0E7F5;
+    border: 2px solid #F0E7F5;
 }
 
 .btn-secondary:hover {
-    background: #7B40C9;
-    color: white;
+    background: #F0E7F5;
+    color: #4D2681;
     transform: translateY(-2px);
 }
 
@@ -235,8 +228,8 @@ body {
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto;
-    border: 5px solid #D0C0D8;
-    box-shadow: 0 20px 40px rgba(77, 38, 129, 0.2);
+    border: 5px solid rgba(240, 231, 245, 0.3);
+    box-shadow: 0 20px 40px rgba(77, 38, 129, 0.3);
 }
 
 .hero-avatar img {
@@ -251,30 +244,33 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 3rem;
-    color: #4D2681;
+    background: linear-gradient(135deg, #7B40C9 0%, #4D2681 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-family: 'Open Sans', sans-serif;
 }
 
 /* Seção Sobre */
 .about {
     padding: 100px 0;
-    background: #F0E8F8;
+    background: #F0E7F5;
 }
 
 .about-content {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(180, 165, 203, 0.1);
     padding: 3rem;
-    border-radius: 25px;
-    border: 2px solid #E0D0E8;
+    border-radius: 45px;
+    box-shadow: inset -3px 3px 10px rgba(180, 165, 203, 0.6);
 }
 
 .about-text p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    color: #555;
+    color: #4D2681;
     line-height: 1.8;
     font-family: 'Open Sans', sans-serif;
 }
@@ -289,15 +285,15 @@ body {
 .stat {
     text-align: center;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
-    border: 2px solid #E0D0E8;
+    background: rgba(240, 231, 245, 0.8);
+    border-radius: 25px;
+    box-shadow: inset -3px 3px 10px rgba(180, 165, 203, 0.6);
     transition: transform 0.3s ease;
 }
 
 .stat:hover {
     transform: translateY(-5px);
-    background: white;
+    background: #B4A5CB;
 }
 
 .stat h3 {
@@ -309,14 +305,14 @@ body {
 }
 
 .stat p {
-    color: #666;
+    color: #4D2681;
     font-weight: 500;
 }
 
 /* Seção Projetos */
 .projects {
     padding: 100px 0;
-    background: #F0E8F8;
+    background: #B4A5CB;
 }
 
 .projects-grid {
@@ -326,17 +322,16 @@ body {
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
+    background: #F0E7F5;
+    border-radius: 25px;
     overflow: hidden;
-    border: 2px solid #E0D0E8;
+    box-shadow: inset -3px 3px 10px rgba(180, 165, 203, 0.6);
     transition: all 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(77, 38, 129, 0.15);
-    background: white;
+    box-shadow: 0 20px 40px rgba(77, 38, 129, 0.2);
 }
 
 .project-image {
@@ -381,19 +376,20 @@ body {
 .project-link {
     width: 50px;
     height: 50px;
-    background: white;
+    background: #F0E7F5;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #7B40C9;
+    color: #4D2681;
     text-decoration: none;
     transition: transform 0.3s ease;
 }
 
 .project-link:hover {
     transform: scale(1.1);
-    background: #F0E8F8;
+    background: #B4A5CB;
+    color: white;
 }
 
 .project-content {
@@ -409,7 +405,7 @@ body {
 }
 
 .project-content p {
-    color: #666;
+    color: #7B40C9;
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
@@ -421,8 +417,8 @@ body {
 }
 
 .tech-tag {
-    background: #7B40C9;
-    color: white;
+    background: linear-gradient(135deg, #7B40C9 0%, #4D2681 100%);
+    color: #F0E7F5;
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
     font-size: 0.8rem;
@@ -433,7 +429,7 @@ body {
 /* Seção Habilidades */
 .skills {
     padding: 100px 0;
-    background: #F0E8F8;
+    background: #F0E7F5;
 }
 
 .skills-grid {
@@ -443,10 +439,10 @@ body {
 }
 
 .skill-category {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(180, 165, 203, 0.2);
     padding: 2rem;
-    border-radius: 20px;
-    border: 2px solid #E0D0E8;
+    border-radius: 25px;
+    box-shadow: inset -3px 3px 10px rgba(180, 165, 203, 0.6);
 }
 
 .skill-category h3 {
@@ -466,13 +462,13 @@ body {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: #555;
+    color: #4D2681;
     font-family: 'Open Sans', sans-serif;
 }
 
 .skill-bar {
     height: 10px;
-    background: #E0D0E8;
+    background: rgba(240, 231, 245, 0.5);
     border-radius: 5px;
     overflow: hidden;
 }
@@ -488,7 +484,7 @@ body {
 /* Seção Contato */
 .contact {
     padding: 100px 0;
-    background: #F0E8F8;
+    background: #B4A5CB;
 }
 
 .contact-content {
@@ -499,10 +495,10 @@ body {
 }
 
 .contact-info {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(240, 231, 245, 0.9);
     padding: 2rem;
-    border-radius: 20px;
-    border: 2px solid #E0D0E8;
+    border-radius: 25px;
+    box-shadow: inset -3px 3px 10px rgba(180, 165, 203, 0.6);
 }
 
 .contact-info h3 {
@@ -515,7 +511,7 @@ body {
 
 .contact-info p {
     font-size: 1.1rem;
-    color: #666;
+    color: #7B40C9;
     margin-bottom: 2rem;
     line-height: 1.6;
 }
@@ -528,7 +524,7 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-    color: #555;
+    color: #4D2681;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -546,26 +542,27 @@ body {
 .social-link {
     width: 50px;
     height: 50px;
-    background: #7B40C9;
+    background: linear-gradient(135deg, #7B40C9 0%, #4D2681 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #F0E7F5;
     text-decoration: none;
     transition: transform 0.3s ease;
 }
 
 .social-link:hover {
     transform: translateY(-3px);
-    background: #4D2681;
+    background: #F0E7F5;
+    color: #4D2681;
 }
 
 .contact-form {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(240, 231, 245, 0.9);
     padding: 2rem;
-    border-radius: 20px;
-    border: 2px solid #E0D0E8;
+    border-radius: 25px;
+    box-shadow: inset -3px 3px 10px rgba(180, 165, 203, 0.6);
 }
 
 .form-group {
@@ -576,20 +573,20 @@ body {
 .form-group textarea {
     width: 100%;
     padding: 1rem;
-    border: 2px solid #E0D0E8;
-    border-radius: 10px;
+    border: 2px solid rgba(180, 165, 203, 0.3);
+    border-radius: 15px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
     font-family: 'Open Sans', sans-serif;
-    background: rgba(255, 255, 255, 0.9);
-    color: #555;
+    background: rgba(240, 231, 245, 0.5);
+    color: #4D2681;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: #7B40C9;
-    background: white;
+    background: #F0E7F5;
 }
 
 .form-group textarea {
@@ -600,7 +597,7 @@ body {
 /* Footer */
 .footer {
     background: #4D2681;
-    color: white;
+    color: #F0E7F5;
     text-align: center;
     padding: 2rem 0;
     font-family: 'Open Sans', sans-serif;
@@ -613,31 +610,21 @@ body {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: rgba(240, 232, 248, 0.95);
+        background: rgba(240, 231, 245, 0.95);
         width: 100%;
         text-align: center;
         transition: 0.3s;
+        box-shadow: inset -3px 3px 10px rgba(180, 165, 203, 0.6);
         padding: 2rem 0;
-        gap: 1rem;
-        border-radius: 0;
+        gap: 2rem;
     }
 
     .nav-menu.active {
         left: 0;
     }
 
-    .nav-menu .nav-link {
-        border-radius: 15px;
-        margin: 0 20px;
-        border: 2px solid #D0C0D8;
-    }
-
     .nav-toggle {
         display: flex;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1001;
     }
 
     .nav-toggle.active .bar:nth-child(2) {
@@ -688,10 +675,6 @@ body {
     .section-title {
         font-size: 2rem;
     }
-
-    .main-content {
-        margin-top: 60px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -712,10 +695,13 @@ body {
         font-size: 0.9rem;
     }
 
-    .nav-link {
-        min-width: 100px;
-        padding: 12px 20px;
-        font-size: 16px;
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .project-card {
+        margin: 0 10px;
     }
 }
 
@@ -733,6 +719,25 @@ body {
 
 .fade-in-up {
     animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Estados de navegação específicos do Figma */
+.nav-link.nav-inicial {
+    color: #4D2681;
+}
+
+.nav-link.nav-sobre:hover,
+.nav-link.nav-projetos:hover,
+.nav-link.nav-contato:hover {
+    color: #7B40C9;
+    font-weight: 600;
+}
+
+.nav-link.nav-sobre.active,
+.nav-link.nav-projetos.active,
+.nav-link.nav-contato.active {
+    color: #4D2681;
+    font-weight: 600;
 }
 
 /* Scroll suave para navegação */
