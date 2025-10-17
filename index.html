@@ -1,307 +1,214 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
-    <link rel="stylesheet" href="styles-tabs.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bruna Studio</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- ClipPath para efeito de recorte -->
+  <svg style="position: absolute; width: 0; height: 0;">
+    <defs>
+      <clipPath id="circleClip">
+        <circle cx="50%" cy="50%" r="10%"></circle>
+      </clipPath>
+      <clipPath id="fullCircleClip">
+        <circle cx="50%" cy="50%" r="70%"></circle>
+      </clipPath>
+    </defs>
+  </svg>
 </head>
 <body>
-    <!-- Header/Navegação em Abas -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link nav-inicial active">Inicial</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link nav-sobre">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#projects" class="nav-link nav-projetos">Projetos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link nav-contato">Contato</a>
-                    </li>
-                </ul>
-                <div class="nav-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <div class="container">
+    <div class="grid">
 
-    <!-- Conteúdo Principal -->
-    <main class="main-content">
-        <!-- Seção Hero -->
-        <section id="home" class="hero">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <h2 class="hero-title">
-                        Olá, bem vindo(a) ao <span class="highlight">Bruna Studio</span>
-                    </h2>
-                    <p class="hero-subtitle">Design gráfico e UI/UX Design</p>
-                    <p class="hero-description">
-                        Criando experiências digitais incríveis com código limpo e design moderno.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">Projetos</a>
-                        <a href="#contact" class="btn btn-secondary">Contato</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="hero-avatar">
-                        <img src="https://via.placeholder.com/300x300/667eea/ffffff?text=Foto" alt="Foto de perfil">
-                    </div>
-                </div>
-            </div>
-        </section>
+      <!-- Card 1 -->
+  <div class="card card-purple-dark card-tall">
+    <div class="floating-hearts">
+<img src="img/hearts.png" alt="Corações" style="width:100%;">
+</div>
+ <div class="icon-circle">
+          <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 
+           1.18 6.88L12 17.77l-6.18 3.25L7 14.14 
+           2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div> 
+  <h1 class="card-main">Bruna <br> Teles</h1>
 
-        <!-- Seção Sobre -->
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title">Sobre Mim</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>
-                            Minha jornada como estudante de Design Gráfico me permite transitar com facilidade entre o Design Gráfico e o Web Design.  
-                            Adoro quando a criatividade me guia para criar soluções eficientes e com um visual elegante, unindo o melhor dos dois mundos.
-                        </p>
-                        <p>
-                            Minha jornada na programação começou há alguns anos e desde então venho 
-                            aprimorando minhas habilidades em diversas tecnologias e frameworks.
-                        </p>
-                        <div class="about-stats">
-                            <div class="stat">
-                                <h3>50+</h3>
-                                <p>Projetos Concluídos</p>
-                            </div>
-                            <div class="stat">
-                                <h3>3+</h3>
-                                <p>Anos de Experiência</p>
-                            </div>
-                            <div class="stat">
-                                <h3>100%</h3>
-                                <p>Satisfação do Cliente</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Corações -->
+<p class="card-description">
+   Sou estudante de <span style="font-weight:bold; color:#3f2c4e99">Design Gráfico</span>, apaixonada por transformar ideias em criações visuais cheias de personalidade. 
+   <br> Busco unir clareza e impacto por meio de paletas de cores harmônicas e animações que dão vida e movimento às marcas. </p> 
+</br>
+</div>
 
-        <!-- Seção Projetos -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title">Meus Projetos</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/400x250/667eea/ffffff?text=Projeto+1" alt="Projeto 1">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3>E-commerce Moderno</h3>
-                            <p>Plataforma de e-commerce desenvolvida com React e Node.js</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">MongoDB</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/400x250/764ba2/ffffff?text=Projeto+2" alt="Projeto 2">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3>App de Tarefas</h3>
-                            <p>Aplicativo de gerenciamento de tarefas com interface intuitiva</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Vue.js</span>
-                                <span class="tech-tag">Firebase</span>
-                                <span class="tech-tag">CSS3</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/400x250/f093fb/ffffff?text=Projeto+3" alt="Projeto 3">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Dashboard Analytics</h3>
-                            <p>Dashboard para visualização de dados e métricas em tempo real</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Angular</span>
-                                <span class="tech-tag">D3.js</span>
-                                <span class="tech-tag">Python</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Habilidades -->
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2 class="section-title">Habilidades</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Frontend</h3>
-                        <div class="skill-list">
-                            <div class="skill-item">
-                                <span class="skill-name">HTML/CSS</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="90"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">JavaScript</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">React</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="80"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Backend</h3>
-                        <div class="skill-list">
-                            <div class="skill-item">
-                                <span class="skill-name">Node.js</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="75"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Python</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="70"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">MongoDB</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="65"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Ferramentas</h3>
-                        <div class="skill-list">
-                            <div class="skill-item">
-                                <span class="skill-name">Git</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Docker</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="60"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">AWS</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="55"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Contato -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title">Entre em Contato</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3>Vamos trabalhar juntos!</h3>
-                        <p>Estou sempre aberto a novas oportunidades e projetos interessantes.</p>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>seuemail@exemplo.com</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <span>+55 (11) 99999-9999</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>São Paulo, SP</span>
-                            </div>
-                        </div>
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Seu Nome" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Seu Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Assunto" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Meu Portfólio. Todos os direitos reservados.</p>
+      <!-- Card 2 -->
+      <div class="card card-purple-light"> 
+         <div class="sparkle-icon">
+          <div class="sparkle-icon-container">
+            <img src="img/flor.png" alt="Bruna Studio" style="width:100%;">
+          </div>
         </div>
-    </footer>
+    <div class="hero-image">
+          <img src="img/Logo.png" alt="Bruna Studio" style="width: 100%;">
+        </div>
+      </div>
 
-    <script src="script.js"></script>
+      <!-- Card 3 -->
+      <div class="card card-yellow-light">
+        <h2 class="card-title">Contato</h2>
+		
+		<p class="card-description2"> brunapteles@gmail.com <br><a href="https://wa.me/5519989739338">1998973-9338</a></p> 
+        <div class="contact-icon-container">
+          <div class="contact-icon">
+		<svg width="22" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+    <g fill="none">
+        <path fill="#f8f1c7b7" fill-rule="evenodd" d="M.879 7.003C.879 3.67 3.665.88 7 .879c3.337-.002 6.127 2.793 6.127 6.124c0 3.334-2.789 6.12-6.127 6.118a6.1 6.1 0 0 1-2.684-.617l-3.439.622l1.027-2.732A6.14 6.14 0 0 1 .879 7.003m8.752 2.392c-.602.449-1.465.836-2.294.304c-1.169-.75-2.203-1.737-2.954-2.906c-.418-.651-.065-1.674.503-2.347c.287-.34.786-.29 1.115.01l.78.712c-.265.265-.606.967-.304 1.437c.262.41.587.812 1.359 1.047c.36.11.877-.022 1.142-.287l.7.745c.354.378.368.975-.047 1.285" clip-rule="evenodd"/>
+        <path fill="#f8f1c7b7" d="M7.337 9.7c.829.531 1.692.144 2.294-.305c.415-.31.402-.907.047-1.285l-.7-.745c-.265.265-.783.397-1.142.287c-.772-.235-1.097-.637-1.36-1.047c-.301-.47.04-1.172.305-1.437l-.78-.712c-.329-.3-.828-.35-1.115-.01c-.568.673-.92 1.696-.503 2.347c.75 1.169 1.785 2.156 2.954 2.906Z"/>
+        <path stroke="#243ca7" stroke-linecap="round" stroke-linejoin="round" d="M7.337 9.7c.829.531 1.692.144 2.294-.305c.415-.31.402-.907.047-1.285l-.7-.745c-.265.265-.783.397-1.142.287c-.772-.235-1.097-.637-1.36-1.047c-.301-.47.04-1.172.305-1.437l-.78-.712c-.329-.3-.828-.35-1.115-.01c-.568.673-.92 1.696-.503 2.347c.75 1.169 1.785 2.156 2.954 2.906Z"/>
+        <path stroke="#243ca7" stroke-linecap="round" stroke-linejoin="round" d="M7 .88C3.665.88.88 3.67.88 7.002a6.14 6.14 0 0 0 1.025 3.39L.877 13.127l3.439-.622A6.1 6.1 0 0 0 7 13.121c3.338.002 6.127-2.784 6.127-6.118c0-3.33-2.79-6.126-6.127-6.124Z"/>
+    </g>
+</svg>	
+          <div class="contact-icon2">
+			<svg width="22" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+			<g fill="none">
+				<path fill="#f8f1c7b7" d="M12.5 8.54a1 1 0 0 1-1 1h-10a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1z"/>
+				<path stroke="#f8f1c7b7" stroke-linecap="round" stroke-linejoin="round" d="M5 9.54H1.5a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v4.5"/>
+				<path stroke="#243ca7" stroke-linecap="round" stroke-linejoin="round" d="m.5 1.8l6 4.24l6-4.24"/>
+				<path fill="#243ca7" d="M7.263 10.653c-.35-.062-.35-.565 0-.626a3.18 3.18 0 0 0 2.559-2.45l.02-.097c.077-.347.57-.35.65-.003l.025.113a3.19 3.19 0 0 0 2.566 2.435c.352.061.352.568 0 .63a3.19 3.19 0 0 0-2.566 2.435l-.025.112c-.08.346-.573.344-.65-.003l-.02-.096a3.18 3.18 0 0 0-2.559-2.45"/>
+				<path stroke="#4147d5" stroke-linecap="round" stroke-linejoin="round" d="M7.263 10.653c-.35-.062-.35-.565 0-.626a3.18 3.18 0 0 0 2.559-2.45l.02-.097c.077-.347.57-.35.65-.003l.025.113a3.19 3.19 0 0 0 2.566 2.435c.352.061.352.568 0 .63a3.19 3.19 0 0 0-2.566 2.435l-.025.112c-.08.346-.573.344-.65-.003l-.02-.096a3.18 3.18 0 0 0-2.559-2.45"/></g></svg>
+</p>
+          </div> 
+        </div>
+      </div>
+ 	</div>
+      <!-- Card 4 -->
+      <div class="card card-yellow">
+        <h2 class="card-title">Habilidades</h2>
+       <p class="card-description"> 
+	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACzUlEQVR4nO2Zy2sTURTGb6kKWnChKChFS86NKVW7KUqTc2JEqLZq3QXcKVjBXXEhQq0guKj+AwXBjbFzThjUiu7cuOjWgo+N+MCiWxEquGkdI7elpTSdJhPncSP94MBs5tzvlznfneFGqQ39p9JHH25P5+WiKXOtmkmdRx7sBJLPmqRiCog/dfW6O1SzCIjHlsyvgBhTzaD2XncrkHxfDaBJfuzpebZN2S7IO0NrmF8slEvKdgHxa18A4ndKVVqUrQKU4/7ml8opKFsFxI9rAQDKI2WjUujuA+T5mk8A+XemIB3KNgHxndrjY+mW2u6/dfqVXVsqEF8OYH7xKeSdIWWLNMqboABWbKk9Pfc2A3F/cPPLWeg3PUI1lcqWD2l0BlPIFzTxVSC5DcjjmrgMJC808jQgfwGS2UaNV4PIrOm50NusYdZCHjdrGw8LXtAZBOSD/s6Lbms9+3jSBeY9UnRbq/xrKheTNqfrrnJxDQC5nrwxqavSeblWPfvHJg4DyZz1I0QyZ3K6doAXgite0ia1f3nG4/q7EJXPm++VpjRvMYRXt3kLIbzA5i2C8Bo2bwGE98/mE4TwQjOfAIQXuvklAclI1ABAMqKiUhp5NAaAG5EBaJTJGEboSWQAgPItcgDkr5GY1+TuiuHXr5hKZUu7QwdIoQzEBQDE/aEDaJSbcQGkkUcjAOCncQFolMnmDDBFFGQTquBG+A8Q3zdlrhMNcirnnA4YwvepPJ9Yvp/KqFHeBgJAGUggwPwLUG51dblbVvcoFF5u0ijDQPwz9iDrOgIMyM87shP7a/XK5HivRi7FGmRN/HGdxWYgx+eC9jT3aJKZdQA+hAeAPF095zIHKHe7+0ptjfbt7iu1mR4+xzmvwgMgObvq35cp37OZRs9jSaZWjON8Os9nVJg6kHU6dY6v6JycjOZYvNICeeeUWSOTczPh99+QikR/AWuM7bglqNdjAAAAAElFTkSuQmCC" alt="external-rating-customer-reviews-tanah-basah-glyph-tanah-basah" style="width: 14px;">
+	Criação de posts para redes sociais com foco em identidade visual, engajamento e branding.
+	<br>
+	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACzUlEQVR4nO2Zy2sTURTGb6kKWnChKChFS86NKVW7KUqTc2JEqLZq3QXcKVjBXXEhQq0guKj+AwXBjbFzThjUiu7cuOjWgo+N+MCiWxEquGkdI7elpTSdJhPncSP94MBs5tzvlznfneFGqQ39p9JHH25P5+WiKXOtmkmdRx7sBJLPmqRiCog/dfW6O1SzCIjHlsyvgBhTzaD2XncrkHxfDaBJfuzpebZN2S7IO0NrmF8slEvKdgHxa18A4ndKVVqUrQKU4/7ml8opKFsFxI9rAQDKI2WjUujuA+T5mk8A+XemIB3KNgHxndrjY+mW2u6/dfqVXVsqEF8OYH7xKeSdIWWLNMqboABWbKk9Pfc2A3F/cPPLWeg3PUI1lcqWD2l0BlPIFzTxVSC5DcjjmrgMJC808jQgfwGS2UaNV4PIrOm50NusYdZCHjdrGw8LXtAZBOSD/s6Lbms9+3jSBeY9UnRbq/xrKheTNqfrrnJxDQC5nrwxqavSeblWPfvHJg4DyZz1I0QyZ3K6doAXgite0ia1f3nG4/q7EJXPm++VpjRvMYRXt3kLIbzA5i2C8Bo2bwGE98/mE4TwQjOfAIQXuvklAclI1ABAMqKiUhp5NAaAG5EBaJTJGEboSWQAgPItcgDkr5GY1+TuiuHXr5hKZUu7QwdIoQzEBQDE/aEDaJSbcQGkkUcjAOCncQFolMnmDDBFFGQTquBG+A8Q3zdlrhMNcirnnA4YwvepPJ9Yvp/KqFHeBgJAGUggwPwLUG51dblbVvcoFF5u0ijDQPwz9iDrOgIMyM87shP7a/XK5HivRi7FGmRN/HGdxWYgx+eC9jT3aJKZdQA+hAeAPF095zIHKHe7+0ptjfbt7iu1mR4+xzmvwgMgObvq35cp37OZRs9jSaZWjON8Os9nVJg6kHU6dY6v6JycjOZYvNICeeeUWSOTczPh99+QikR/AWuM7bglqNdjAAAAAElFTkSuQmCC" alt="external-rating-customer-reviews-tanah-basah-glyph-tanah-basah" style="width: 14px;">
+	Desenvolvimento de convites e materiais gráficos aplicando layout, tipografia e paleta de cores.
+	<br>
+	<br>
+	<!-- Botão que abre o modal -->
+<button class="botao-modal" onclick="abrirModal()">Ver Mais</button>
+<br>
+</p>
+        <div class="dog-icon">
+          <img src="img/dog.png" alt="Sobre" style="width:100%;">
+        </div>
+      </div>
+
+<!-- Janela flutuante (modal) -->
+<div id="modal" class="modal">
+  <div class="modal-conteudo">
+    <span class="fechar" onclick="fecharModal()">&times;</span>
+    <h2 style="text-align: center;">Habilidades</h2>
+	<br>
+		<ul>
+		<li><p style="font-family:'Helvetica', sans-serif; font-size: 16px;">Criação de posts para redes sociais com foco em identidade visual, engajamento e branding.</p></li>
+      <li><p style="font-family:'Helvetica', sans-serif; font-size: 16px;">Desenvolvimento de convites e materiais gráficos com layout, tipografia e paleta de cores.</p></li>
+      <li><p style="font-family:'Helvetica', sans-serif; font-size: 16px;">Design de interfaces e protótipos simples com UX, navegabilidade e design responsivo.</p></li>
+      <li><p style="font-family:'Helvetica', sans-serif; font-size: 16px;">Criação de logotipos personalizados com aplicação em mockups.</p></li>
+      <li><p style="font-family:'Helvetica', sans-serif; font-size: 16px;">Conhecimentos básicos em HTML e CSS para estruturação e estilização de páginas web.</p></li>
+	</ul>
+	<br>
+<p style="text-align: center;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFaUlEQVR4nO2Ya0xcRRTHb21ifOAjbZaZWUBqtLZBqyZiNRpmFqElfmiCJrBYdW1aS2qbQqtgFBBigVaEhbn0kdA0raVUZS4kBJM2pvJB1Jg0xg/Gmphoq/YRsfHFQ2OBHjO7e+/eu12WZffu40MnOSG5zOz8f2fOnDkzinK9XW/Jb5mZdBXGTMWEfosJncSEQRx21pHN7k2K8Ly8vBsRYfsxYbNxirYaZjVJEY8JG7FVOEniCgQ8b/IaHUKIuRBac+tcY8z9o53H4Si8B2PajZwFbntjntAZXQwi7I1oxsUCgAg7ERgz63QWrohLuCEEM272fNTjYgHArM/kqI6YRVt+lLAzQQAXC9cHBvhy0HgLaPwkaOpX0swA+rf5bKiu9rQBgNnXtgBgQif0H3U4WIZFeFPTDaDxZhDqNGgqmC0EICr7q7fdGLMs56l/5e/bAMDG5wQQaudcYmIBGD/WYYxZfnex/MZtDSGEaKEhXut6DAS/aifAaGuDMcb1yDr/9wHVmNOGTcyGDQDB+yOJiQXghWK3MaZx/abAd67FtwKIPWBOoxjTej+AeslOgK6XXzH6Z2W54Pu9zf7/CT4WF4BvFQjbZz1B6UejLXXTk33euAAm+7y+sHne5Hlpb1Xo3vetwAwALErXUgJCrdxVBlc+7AoCCPVS3CsQgMjAmH2TKOFZWQwaKjZZxfvtuB3iE74CD64ogb5Xd8Ks4Cbvyyy3Nz9hxdzlI+2t0ewBGesvramICmTD2gpf/0D47Ep4MQeCvwaa+k8kAE+IeOnt6lIPtLxY6fu76r611v7F7pkrH3TUJK2YA+HNAtHdAJr6nX64hfMucTKoedZzbqrPOwKCn9Jtsq9jZGep5ydi6oucdGNSijkYPJAJGj8AQh2fawVM4fHZPM5qMwAw+1lRlPjS57zF3ED3StDUX+bbA3rY/N3b3hppruzsx2/GhI0ZEKhgddwACLM/9B/MzWV3GuKHe24Bjf8QzSaWtqPUIw+lt+edj7CjRsgRtjl+AEKN2j7T6SoK2bxRncTSdnsqowLAmO42JYw37QDoNAkRQQD19EIAqqNfgfeCe45tiRtAvhroTylyQxsAGp9YCIBMlX/2vhtxD+Tmspts3wOyIcK2I8xGCXGVxArgz+8VX0Seh+4K9qfnFKVssWJ3W7r0idskUFH+uklZ9i6kXPDleczaZLZRwgFgetnWDRzaMgl7DhH220LrHFkehHwb88U6po3mhy1EWE8gVAdtOQPMDWPWsFDh5looDAQE7EfzPEuWrL5dSYTnQyclhFYeqtpaNN3fdTGaC42sMhvXbxyWJ2wkgITEvCUzEHrSfCKD2IdBUw+FFnShAIHblUyji2R2IYRtRojVJvxtVG5Ys7dCywk/hFgMmloOgn8Jmjo5D0ByG8b0k0iZAQb5o6DxM9HdiVMCwC7qQpzOghyL+IEuGu4ukFYACLP/dCHyammIFz13yCePcOJn+rkhXp4VabMChDx5VxBArZ/rFD7fs8cAeHhlSaoB6KkgAK00APwvymEBjlbvMADcheUpDiFiyUJnZVqNVAvJB9r8+582AA5vr0otgMPBMjChvxrnAGYfSwg9XZpt4pgX3K4yyy3M8nonumuVVDTkLHBjwq6aK8X9W7ZduHBwj+8hSsa8DBuz54nTBcN1r1tXSPBnlFQ1jGm9FSJC1el0gVq5NVT8FAy1+cIvZQ35ViIYTuFMhs01nvfHf7OSDs3hYBkIFWyTe2FZTuHvOdmFvlQps82RqmqYOt55rXihfgqiyThD0qqBxotA8PNhU6r/keswCG/YC4ySLk0KBNG9AQR/HwT/HAQ/AYK/A4PdDyVy4v8BcXrLYP8DIjQAAAAASUVORK5CYII=" alt="figma">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADVElEQVR4nO2ZzU/UUBDAm/AvqHcT0ZsXEvZNt7QIXROiKLrbBCMQQbK7rYkcNMZvYjQmSBFPgEdM8C8Q+QO86EGvfiTrByZGPXhQMFHZPjPd3fLYbWvbbcuadJLJa3ennfm9N32zO+W4RBJJJJGWFkEQdgLAAgB8JIRsAACNUknFxyr67Ozs3N1U8ADQQwj5EnXQ4AzznRAiBwq+o6NjBwB83q7gYRPiKwDsCjL7C8xN3hNCJEVR2riIRVGUtlQqJQDAOwZkzveNqnlYA5C4mIXn+QOM/w++b8A+sHHMfL2gT/bB5vwKm4f139HZ4r6yrq6UdfWnMaPRqBSYGKh+Zm8oAGbwM+palIEbNgBlXf1BpwrtTQPgzMcRvFEHgOdlXV0OAUBbd3K4euM0zcrdpuJx+ADaetMAbg5nh49Y1+Cxk93Lq6foUiFHX10b9QWAGimAkum2rsnKkmPwAs+bNl1pnr52gWgWoFYHVr0AlCbHGqooflZvhzPP2iwVctEApFKp/QBwC0cvAIv5bAPAg3xjcJg2OPO1FXhzPaIVcBInZ/nDcgNAoT9ja4tp87CYcw0+VoBvt/M0zVcc4cge43dh7UJGVADLZwctR8X+jDnztfPHE4MN9vOjA1RK8+boBsBXJwLHSAEu5/qYvM+auV87v6L0NdiL1WdATPOuAOOHek07HH0DEEL2AMA5HN0Afk+rNCMKVsBvJ8e27EiyKNBf0+o/U8Ow0bWpIn1y/qQ5BgEoVX8JltwAnl4Yst372Zrw7MJwIADDRkMvZHeZ6ntv5KinqtxSAAelzfRxUkyxlgQo2VRfJ2WrcssALNpUXydlq3LLAOSZ6rsycaLBGdYAu6rsFWDepl6ECtDTJbhWXLZCo63fOiDa2IUK4KWi2tl4rcQQ9/+BsBUSAPiPAYhDYyuu4P/oqhU8bgRBVsBqLWKvMm6AF5dGLIBjvVKgFbjPNnexV4krEXXgG7pGn18cocdlyQK4M9TvHwBfLmB/3muljUplUaCfbo77B6iugryd7whkUTB/rteCx5YmF/BFxxy2uON4xZTmgQ70imbasDNfAdAecc0Kdomx0RrndmpU+qL+mruuEFOFdmy0uvVJwwtcW8eZpzPalr+2iSSSCGfKX93sjgEVLU0CAAAAAElFTkSuQmCC" alt="adobe-illustrator">
+<img src="data:image/png;base64,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" alt="notion">
+<br>
+<img src="data:image/png;base64,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" alt="canva">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACl0lEQVR4nO2YTWsTQRjHF/oNpHpvsvOkXVMa7M0ulVaP2lhqq4J+AUE8iBfx5EHw5EmJN0Hx0EI9+C54KOhBuyO+7STuGny7qEdNPRVGnu1mne7ONqtN2YnMHx4mk5lM/r+Z2UnmMQwtLS0tLS0thWSa5nYAqAHAFwBYBQCec6wCwOfQ08CG5gFgEgC+KWCay4IQ8oMQsi/NfD8AfM3bJHSO74VCYYcMoCaQfjRNc49hGH1G/uoDAJsQ8kHwdyXRK9xnQYfQvFIqlUoTwip8SnQQH1hFZl62EtGDnWgV91m8rf68XmKOd49Rb4VRn+cVIHhkL5uQCaDhNAaZ47fyNM5kAI7fwontCOBS/1HexpkMgPrcpd6DDADeL1UBGPVWRIBm2NgUAcQBpvZXefXAtLSOr+NndrttdmYuaHeevArqWGJ9dmYudexsAP6fyS4WiyYh5DSWaQDxD4t1/PI4wMGpNUPt+uFDR/jrZ3V+7OjxDcdi/wKQpqwAWd7DmJzYKzUCmwWwLGsbIWQay04A8cgKYFnWuhK6CQAANGykWwVw+VKNj+4aDcqtAOCyU6ibW+hvx2K9CACxE6yrADho+2SR1TfzXjV2isX7dwUg7xi3xwN/WPYkwOO7S/zC+YtB2ZMATBI9BXD2zDle3lkOShmA9EKTt2kWxtvld9EP4HB5WAoQXSnxDqoawMKNW9EOGdttSwGuipd6vIPiSuRt/M1yg89fX+T2mB0BnDxxSgowgHmXtL8LqkRlpMKXHj5NAqAwaaRybqgyUuE3r80LKyRcaISV6Me8C6YuVEgtDg0OBXset40480E43n2jk9YyEmpc6tk68/7PRGYiTdjRpf4dJUAcv+VS/7b74j3JZF5LS0tL67/Wb3Ro9EgdcxUIAAAAAElFTkSuQmCC" alt="html">
+<img src="data:image/png;base64,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" alt="css3">
+</p>
+
+
+  </div>
+</div>
+      
+<!-- Card 5 -->
+      <div class="card card-purple-medium">
+        <div class="star-burst-icon">
+          <img src="img/shining.png" alt="Projetos" style="width:100%;">
+		</div>
+	<h2 class="card-title">Projetos</h2>
+	<p class="card-description" style="align-items: center;">Confira alguns dos projetos acadêmicos e autorais que desenvolvi em design gráfico,
+	explorando identidade visual, redes sociais e materiais visuais.    
+<!-- Botão que abre o modal -->
+	<button class="botao-modal2" onclick="abrirModal2()">Ver Mais</button>
+	<br>
+	</p>
+	</div>
+<!-- Janela flutuante (modal) -->
+<div id="modal2" class="modal2">
+  <div class="modal-conteudo2">
+    <span class="fechar" onclick="fecharModal2()">&times;</span>
+    <h2 style="text-align: center;">Projetos</h2>
+	<br>
+ <div class="circular-badge">
+    <img src="img/b.png" alt="Badge" style="width:100%;">
+    </div>
+ </div>
+</div>
+   <!-- Fontes Usadas -->
+<style>
+@import url('https://fonts.cdnfonts.com/css/reenie-beanie');
+</style>
+<style>
+                            @import url('https://fonts.cdnfonts.com/css/magofah');
+</style>
+  <style>
+                            @import url('https://fonts.cdnfonts.com/css/carita');
+</style>
+ <style>
+                            @import url('https://fonts.cdnfonts.com/css/fregan-serif');
+</style>
+<style>
+                            @import url('https://fonts.cdnfonts.com/css/helvetica-255');
+</style>
+	</div> <!-- fecha grid -->
+  </div> <!-- fecha container -->
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+  function abrirModal() {
+    document.getElementById("modal").style.display = "block";
+  }
+
+  function fecharModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("modal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+<script>
+  function abrirModal2() {
+    document.getElementById("modal2").style.display = "block";
+  }
+
+  function fecharModal2() {
+    document.getElementById("modal2").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal2 = document.getElementById("modal2");
+    if (event.target == modal2) {
+      modal2.style.display = "none";
+    }
+  }
+</script>
 </body>
 </html>
